@@ -1,7 +1,7 @@
 import 'package:estudo_bloc/src/bloc/task/task_bloc.dart';
 import 'package:estudo_bloc/src/bloc/task/task_event.dart';
 import 'package:estudo_bloc/src/bloc/task/task_state.dart';
-import 'package:estudo_bloc/src/models/task_model.dart';
+import 'package:estudo_bloc/src/widgets/task_foab.dart';
 import 'package:estudo_bloc/src/widgets/task_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +45,7 @@ class _TasksPageState extends State<TasksPage> {
           ),
           body: _buildBody(state),
           floatingActionButton: state is TaskLoadedState
-              ? _buildFloatingActionButton(state)
+              ? TaskFoab(taskBloc: _taskBloc, state: state)
               : null,
         );
       },
@@ -73,19 +73,5 @@ class _TasksPageState extends State<TasksPage> {
         },
       );
     }
-  }
-
-  Widget _buildFloatingActionButton(TaskState? state) {
-    void onTapNewTask() {
-      _taskBloc.inputTask.add(
-        PostTasks(task: TaskModel(title: 'Nova Tarefa')),
-      );
-    }
-
-    return FloatingActionButton(
-      onPressed: state is TaskLoadingState ? null : onTapNewTask,
-      tooltip: 'Increment',
-      child: const Icon(Icons.add),
-    );
   }
 }
