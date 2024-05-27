@@ -1,4 +1,4 @@
-import 'package:estudo_bloc/src/data/models/task_model.dart';
+import 'package:estudo_bloc/src/models/task_model.dart';
 
 class TaskRepository {
   final List<TaskModel> _tasks = [];

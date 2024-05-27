@@ -1,7 +1,7 @@
-import 'package:estudo_bloc/src/data/bloc/task/task_bloc.dart';
-import 'package:estudo_bloc/src/data/bloc/task/task_event.dart';
-import 'package:estudo_bloc/src/data/bloc/task/task_state.dart';
-import 'package:estudo_bloc/src/data/models/task_model.dart';
+import 'package:estudo_bloc/src/bloc/task/task_bloc.dart';
+import 'package:estudo_bloc/src/bloc/task/task_event.dart';
+import 'package:estudo_bloc/src/bloc/task/task_state.dart';
+import 'package:estudo_bloc/src/models/task_model.dart';
 import 'package:flutter/material.dart';
 
 class TasksPage extends StatefulWidget {

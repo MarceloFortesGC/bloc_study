@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:estudo_bloc/src/data/bloc/task/task_event.dart';
-import 'package:estudo_bloc/src/data/bloc/task/task_state.dart';
-import 'package:estudo_bloc/src/data/models/task_model.dart';
-import 'package:estudo_bloc/src/data/repositories/task_repository.dart';
+import 'package:estudo_bloc/src/bloc/task/task_event.dart';
+import 'package:estudo_bloc/src/bloc/task/task_state.dart';
+import 'package:estudo_bloc/src/models/task_model.dart';
+import 'package:estudo_bloc/src/repositories/task_repository.dart';
 
 class TaskBloc {
   final _repository = TaskRepository();
